@@ -9,6 +9,7 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     @Inject lateinit var user: User
+    @Inject lateinit var customClass: CustomClass
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,5 +27,7 @@ class MainActivity : AppCompatActivity() {
                 "Last name: ${user.lastName}\n" +
                 "Address: ${user.address}"
         )
+
+        customClass.readFromCustomClass()
     }
 }

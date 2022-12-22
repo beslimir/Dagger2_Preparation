@@ -4,7 +4,7 @@ import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Named
 
-@Component
+@Component(modules = [CustomClassModule::class])
 interface UserComponent {
 
     fun inject(mainActivity: MainActivity)
